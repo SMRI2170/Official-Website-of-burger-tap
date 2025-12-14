@@ -10,139 +10,96 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .legal-text h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-        }
-        .legal-text h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .legal-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-            color: #374151;
-        }
-        .legal-text ol {
-            list-style-type: decimal;
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .legal-text ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .legal-text li {
-            margin-bottom: 0.5rem;
-            color: #374151;
-        }
-        /* Smooth transition */
-        .page-section {
-            display: none;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        .page-section.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <!-- Navigation -->
+    <!-- Navigation Header -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center cursor-pointer" onclick="navigateTo('home')">
-                    <div class="flex-shrink-0 flex items-center text-orange-600">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center text-orange-600 hover:opacity-90 transition">
                         <i class="fa-solid fa-burger text-2xl mr-2"></i>
                         <span class="font-black text-xl tracking-tight">Burger Tap</span>
-                    </div>
+                    </a>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <button onclick="navigateTo('home')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Home</button>
-                    <button onclick="navigateTo('features')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Features</button>
-                    <button onclick="navigateTo('terms')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Terms</button>
-                    <button onclick="navigateTo('privacy')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Privacy</button>
+                    <a href="index.html" class="text-orange-600 font-medium px-3 py-2 rounded-md text-sm transition">Home</a>
+                    <a href="#features" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Features</a>
+                    <a href="terms.html" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Terms</a>
+                    <a href="privacy.html" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Privacy</a>
                     <button class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-700 transition shadow-md transform hover:-translate-y-0.5">
                         Download
                     </button>
                 </div>
+
                 <!-- Mobile menu button -->
                 <div class="flex items-center md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-orange-600 focus:outline-none p-2">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-600 hover:text-orange-600 focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
+
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Home</button>
-                <button onclick="navigateTo('terms')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Terms</button>
-                <button onclick="navigateTo('privacy')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Privacy</button>
+                <a href="index.html" class="block w-full text-left px-3 py-2 text-base font-medium text-orange-600 bg-orange-50 rounded-md">Home</a>
+                <a href="#features" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Features</a>
+                <a href="terms.html" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Terms</a>
+                <a href="privacy.html" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Privacy</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main class="flex-grow">
-
-        <!-- ==================== HOME PAGE ==================== -->
-        <div id="home" class="page-section active">
-            <!-- Hero Section -->
-            <div class="bg-gradient-to-br from-orange-50 to-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                        <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-                            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                                <span class="block">Tap. Stack.</span>
-                                <span class="block text-orange-600">Enjoy the Taste.</span>
-                            </h1>
-                            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Burger Tap is the ultimate experience for burger lovers. From managing your daily cravings to discovering new flavors, we support your tasty lifestyle all in one app.
-                            </p>
-                            <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                                <p class="text-base font-medium text-gray-900 mb-3">Download Now</p>
-                                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                    <button class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
-                                        <i class="fa-brands fa-apple text-2xl mr-3"></i>
-                                        <div class="text-left">
-                                            <div class="text-xs">Download on the</div>
-                                            <div class="text-sm font-bold leading-none">App Store</div>
-                                        </div>
-                                    </button>
-                                    <button class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
-                                        <i class="fa-brands fa-google-play text-2xl mr-3"></i>
-                                        <div class="text-left">
-                                            <div class="text-xs">GET IT ON</div>
-                                            <div class="text-sm font-bold leading-none">Google Play</div>
-                                        </div>
-                                    </button>
-                                </div>
+        <!-- Hero Area -->
+        <div class="bg-gradient-to-br from-orange-50 to-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+                            <span class="block">Tap. Stack.</span>
+                            <span class="block text-orange-600">Enjoy the Taste.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Burger Tap is the ultimate experience for burger lovers. From managing your daily cravings to discovering new flavors, we support your tasty lifestyle all in one app.
+                        </p>
+                        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                            <p class="text-base font-medium text-gray-900 mb-3">Download Now</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <button class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
+                                    <i class="fa-brands fa-apple text-2xl mr-3"></i>
+                                    <div class="text-left">
+                                        <div class="text-xs">Download on the</div>
+                                        <div class="text-sm font-bold leading-none">App Store</div>
+                                    </div>
+                                </button>
+                                <button class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
+                                    <i class="fa-brands fa-google-play text-2xl mr-3"></i>
+                                    <div class="text-left">
+                                        <div class="text-xs">GET IT ON</div>
+                                        <div class="text-sm font-bold leading-none">Google Play</div>
+                                    </div>
+                                </button>
                             </div>
                         </div>
-                        <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-                            <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                                <div class="relative block w-full bg-white rounded-lg overflow-hidden">
-                                    <!-- Placeholder for App Screenshot -->
-                                    <div class="aspect-w-10 aspect-h-16 bg-gray-200 flex items-center justify-center h-96">
-                                        <i class="fa-solid fa-mobile-screen text-9xl text-gray-300"></i>
-                                        <span class="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">App Screenshot</span>
+                    </div>
+                    <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                        <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                            <div class="relative block w-full bg-white rounded-lg overflow-hidden border border-gray-100 shadow-2xl">
+                                <!-- App Screenshot Placeholder -->
+                                <div class="aspect-w-10 aspect-h-16 bg-gray-50 flex items-center justify-center h-96">
+                                    <div class="text-center p-8">
+                                        <i class="fa-solid fa-mobile-screen text-8xl text-orange-200 mb-4"></i>
+                                        <p class="text-gray-400 font-medium">App Screenshot</p>
                                     </div>
                                 </div>
                             </div>
@@ -150,175 +107,63 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Features Section -->
-            <div id="features" class="py-16 bg-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center">
-                        <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Features</h2>
-                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                            Why Choose Burger Tap?
-                        </p>
-                    </div>
+        <!-- Features Area -->
+        <div id="features" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Features</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Why Choose Burger Tap?
+                    </p>
+                </div>
 
-                    <div class="mt-10">
-                        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
-                            <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
-                                    <i class="fa-solid fa-bolt text-xl"></i>
-                                </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Lightning Fast</h3>
-                                <p class="mt-2 text-base text-gray-500">
-                                    Experience zero lag. Our optimized engine ensures every tap registers instantly for a smooth experience.
-                                </p>
+                <div class="mt-10">
+                    <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                        <!-- Feature 1 -->
+                        <div class="relative text-center p-6 rounded-xl hover:bg-orange-50 transition duration-300">
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6 shadow-md">
+                                <i class="fa-solid fa-bolt text-xl"></i>
                             </div>
+                            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Lightning Fast</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Experience zero lag. Our optimized engine ensures every tap registers instantly for a smooth experience.
+                            </p>
+                        </div>
 
-                            <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
-                                    <i class="fa-solid fa-shield-halved text-xl"></i>
-                                </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Secure & Safe</h3>
-                                <p class="mt-2 text-base text-gray-500">
-                                    Your data is protected with top-tier encryption. Enjoy the app with complete peace of mind.
-                                </p>
+                        <!-- Feature 2 -->
+                        <div class="relative text-center p-6 rounded-xl hover:bg-orange-50 transition duration-300">
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6 shadow-md">
+                                <i class="fa-solid fa-shield-halved text-xl"></i>
                             </div>
+                            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Secure & Safe</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Your data is protected with top-tier encryption. Enjoy the app with complete peace of mind.
+                            </p>
+                        </div>
 
-                            <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
-                                    <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
-                                </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Smart AI</h3>
-                                <p class="mt-2 text-base text-gray-500">
-                                    Our AI learns your preferences to suggest the best combos and features tailored just for you.
-                                </p>
+                        <!-- Feature 3 -->
+                        <div class="relative text-center p-6 rounded-xl hover:bg-orange-50 transition duration-300">
+                            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6 shadow-md">
+                                <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                             </div>
+                            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Smart AI</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Our AI learns your preferences to suggest the best combos and features tailored just for you.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- ==================== PRIVACY POLICY PAGE ==================== -->
-        <div id="privacy" class="page-section">
-            <div class="py-12 bg-gray-50">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <div class="px-6 py-8 sm:p-10">
-                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">Privacy Policy</h1>
-                            <div class="legal-text text-gray-600">
-                                <p>Burger Tap ("we," "us," or "our") operates the Burger Tap mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
-
-                                <h2>1. Information Collection and Use</h2>
-                                <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
-                                <ol>
-                                    <li>
-                                        <strong>Personal Data</strong><br>
-                                        While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
-                                        <ul>
-                                            <li>Email address</li>
-                                            <li>First name and last name</li>
-                                            <li>Phone number</li>
-                                            <li>Cookies and Usage Data</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <strong>Usage Data</strong><br>
-                                        We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data"). This may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, unique device identifiers and other diagnostic data.
-                                    </li>
-                                </ol>
-
-                                <h2>2. Use of Data</h2>
-                                <p>Burger Tap uses the collected data for various purposes:</p>
-                                <ul>
-                                    <li>To provide and maintain the Service</li>
-                                    <li>To notify you about changes to our Service</li>
-                                    <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-                                    <li>To provide customer care and support</li>
-                                    <li>To provide analysis or valuable information so that we can improve the Service</li>
-                                    <li>To monitor the usage of the Service</li>
-                                    <li>To detect, prevent and address technical issues</li>
-                                </ul>
-
-                                <h2>3. Disclosure of Data</h2>
-                                <p>Burger Tap may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
-                                <ul>
-                                    <li>To comply with a legal obligation</li>
-                                    <li>To protect and defend the rights or property of Burger Tap</li>
-                                    <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
-                                    <li>To protect the personal safety of users of the Service or the public</li>
-                                    <li>To protect against legal liability</li>
-                                </ul>
-
-                                <h2>4. Security of Data</h2>
-                                <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
-
-                                <h2>5. Contact Us</h2>
-                                <p>If you have any questions about this Privacy Policy, please contact us:</p>
-                                <p class="bg-gray-100 p-4 rounded-md">
-                                    Burger Tap Support Team<br>
-                                    123 Burger Lane, Food City, FC 90210<br>
-                                    Email: support@burgertap.example.com
-                                </p>
-
-                                <p class="text-right mt-8 text-sm text-gray-500">
-                                    Last Updated: December 14, 2025
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==================== TERMS OF SERVICE PAGE ==================== -->
-        <div id="terms" class="page-section">
-            <div class="py-12 bg-gray-50">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <div class="px-6 py-8 sm:p-10">
-                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">Terms of Service</h1>
-                            <div class="legal-text text-gray-600">
-                                <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Burger Tap mobile application (the "Service") operated by Burger Tap ("us", "we", or "our").</p>
-
-                                <h2>1. Agreement to Terms</h2>
-                                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
-
-                                <h2>2. Accounts</h2>
-                                <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
-                                <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.</p>
-
-                                <h2>3. Intellectual Property</h2>
-                                <p>The Service and its original content, features, and functionality are and will remain the exclusive property of Burger Tap and its licensors. The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Burger Tap.</p>
-
-                                <h2>4. Links To Other Web Sites</h2>
-                                <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by Burger Tap.</p>
-                                <p>Burger Tap has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services. You further acknowledge and agree that Burger Tap shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
-
-                                <h2>5. Termination</h2>
-                                <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.</p>
-
-                                <h2>6. Limitation of Liability</h2>
-                                <p>In no event shall Burger Tap, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage.</p>
-
-                                <h2>7. Changes</h2>
-                                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
-
-                                <p class="text-right mt-8 text-sm text-gray-500">
-                                    Last Updated: December 14, 2025
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Footer Brand -->
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center text-white mb-4">
                         <i class="fa-solid fa-burger text-2xl mr-2 text-orange-500"></i>
@@ -328,22 +173,28 @@
                         Making your daily life tastier, one tap at a time.
                     </p>
                 </div>
+                
+                <!-- Footer Links 1 -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" onclick="navigateTo('home')" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#" onclick="navigateTo('features')" class="hover:text-white transition">Features</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
                         <li><a href="#" class="hover:text-white transition">FAQ</a></li>
                     </ul>
                 </div>
+                
+                <!-- Footer Links 2 -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Legal</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" onclick="navigateTo('terms')" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" onclick="navigateTo('privacy')" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
                     </ul>
                 </div>
+                
+                <!-- Download Links -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Download</h4>
                     <div class="flex space-x-2">
@@ -357,43 +208,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function navigateTo(pageId) {
-            // Close mobile menu
-            document.getElementById('mobile-menu').classList.add('hidden');
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
-
-            // Hide all sections
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Show target section
-            if (pageId === 'home' || pageId === 'features') {
-                document.getElementById('home').classList.add('active');
-                if(pageId === 'features') {
-                    // Smooth scroll to features
-                    setTimeout(() => {
-                        const el = document.getElementById('features');
-                        if(el) el.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                }
-            } else {
-                const target = document.getElementById(pageId);
-                if (target) {
-                    target.classList.add('active');
-                }
-            }
-        }
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 </body>
 </html>
