@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アプリ公式サイト | SmartApp</title>
+    <title>Official Site | Burger Tap</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         .legal-text h2 {
             font-size: 1.25rem;
@@ -67,23 +67,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center cursor-pointer" onclick="navigateTo('home')">
-                    <div class="flex-shrink-0 flex items-center text-blue-600">
-                        <i class="fa-solid fa-layer-group text-2xl mr-2"></i>
-                        <span class="font-bold text-xl tracking-tight">SmartApp</span>
+                    <div class="flex-shrink-0 flex items-center text-orange-600">
+                        <i class="fa-solid fa-burger text-2xl mr-2"></i>
+                        <span class="font-black text-xl tracking-tight">Burger Tap</span>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <button onclick="navigateTo('home')" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">ホーム</button>
-                    <button onclick="navigateTo('features')" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">機能</button>
-                    <button onclick="navigateTo('terms')" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">利用規約</button>
-                    <button onclick="navigateTo('privacy')" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition">プライバシーポリシー</button>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md transform hover:-translate-y-0.5">
-                        ダウンロード
+                    <button onclick="navigateTo('home')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Home</button>
+                    <button onclick="navigateTo('features')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Features</button>
+                    <button onclick="navigateTo('terms')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Terms</button>
+                    <button onclick="navigateTo('privacy')" class="text-gray-600 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Privacy</button>
+                    <button class="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-700 transition shadow-md transform hover:-translate-y-0.5">
+                        Download
                     </button>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="flex items-center md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 focus:outline-none p-2">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-orange-600 focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -92,9 +92,9 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-md">ホーム</button>
-                <button onclick="navigateTo('terms')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-md">利用規約</button>
-                <button onclick="navigateTo('privacy')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-md">プライバシーポリシー</button>
+                <button onclick="navigateTo('home')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Home</button>
+                <button onclick="navigateTo('terms')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Terms</button>
+                <button onclick="navigateTo('privacy')" class="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-orange-600 rounded-md">Privacy</button>
             </div>
         </div>
     </nav>
@@ -105,19 +105,19 @@
         <!-- ==================== HOME PAGE ==================== -->
         <div id="home" class="page-section active">
             <!-- Hero Section -->
-            <div class="bg-gradient-to-br from-blue-50 to-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+            <div class="bg-gradient-to-br from-orange-50 to-white pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                         <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
                             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                                <span class="block">あなたの日常を</span>
-                                <span class="block text-blue-600">もっとスマートに。</span>
+                                <span class="block">Tap. Stack.</span>
+                                <span class="block text-orange-600">Enjoy the Taste.</span>
                             </h1>
                             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                SmartAppは、日々のタスク管理から健康管理まで、あなたの生活をオールインワンでサポートする次世代アプリです。今すぐ無料で始めましょう。
+                                Burger Tap is the ultimate experience for burger lovers. From managing your daily cravings to discovering new flavors, we support your tasty lifestyle all in one app.
                             </p>
                             <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                                <p class="text-base font-medium text-gray-900 mb-3">ダウンロードはこちらから</p>
+                                <p class="text-base font-medium text-gray-900 mb-3">Download Now</p>
                                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                     <button class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
                                         <i class="fa-brands fa-apple text-2xl mr-3"></i>
@@ -142,7 +142,7 @@
                                     <!-- Placeholder for App Screenshot -->
                                     <div class="aspect-w-10 aspect-h-16 bg-gray-200 flex items-center justify-center h-96">
                                         <i class="fa-solid fa-mobile-screen text-9xl text-gray-300"></i>
-                                        <span class="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">アプリ画面イメージ</span>
+                                        <span class="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">App Screenshot</span>
                                     </div>
                                 </div>
                             </div>
@@ -155,41 +155,41 @@
             <div id="features" class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center">
-                        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Features</h2>
+                        <h2 class="text-base text-orange-600 font-semibold tracking-wide uppercase">Features</h2>
                         <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                            選ばれる3つの理由
+                            Why Choose Burger Tap?
                         </p>
                     </div>
 
                     <div class="mt-10">
                         <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
                             <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
+                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
                                     <i class="fa-solid fa-bolt text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">爆速な動作</h3>
+                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Lightning Fast</h3>
                                 <p class="mt-2 text-base text-gray-500">
-                                    最新の技術を使用し、ストレスフリーな操作性を実現しました。起動も一瞬です。
+                                    Experience zero lag. Our optimized engine ensures every tap registers instantly for a smooth experience.
                                 </p>
                             </div>
 
                             <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
+                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
                                     <i class="fa-solid fa-shield-halved text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">安心のセキュリティ</h3>
+                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Secure & Safe</h3>
                                 <p class="mt-2 text-base text-gray-500">
-                                    あなたのデータは最高レベルの暗号化技術で守られています。
+                                    Your data is protected with top-tier encryption. Enjoy the app with complete peace of mind.
                                 </p>
                             </div>
 
                             <div class="relative text-center p-6 rounded-xl hover:bg-gray-50 transition">
-                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
+                                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white left-1/2 transform -translate-x-1/2 -top-6">
                                     <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">AIサポート</h3>
+                                <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Smart AI</h3>
                                 <p class="mt-2 text-base text-gray-500">
-                                    AIがあなたの好みを学習し、最適な提案を自動で行います。
+                                    Our AI learns your preferences to suggest the best combos and features tailored just for you.
                                 </p>
                             </div>
                         </div>
@@ -204,78 +204,64 @@
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div class="px-6 py-8 sm:p-10">
-                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">プライバシーポリシー</h1>
+                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">Privacy Policy</h1>
                             <div class="legal-text text-gray-600">
-                                <p>SmartApp運営事務局（以下「当方」といいます。）は、当方が提供するスマートフォン用アプリケーション「SmartApp」（以下「本アプリ」といいます。）における利用者情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
+                                <p>Burger Tap ("we," "us," or "our") operates the Burger Tap mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
 
-                                <h2>第1条（収集する利用者情報及び収集方法）</h2>
-                                <p>本ポリシーにおいて、「利用者情報」とは、ユーザーの識別に係る情報、通信サービス上の行動履歴、その他ユーザーまたはユーザーの端末に関連して生成または蓄積された情報であって、本ポリシーに基づき当方が収集するものを意味します。</p>
+                                <h2>1. Information Collection and Use</h2>
+                                <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
                                 <ol>
                                     <li>
-                                        <strong>ユーザーからご提供いただく情報</strong><br>
-                                        本サービスを利用するために、または本サービスの利用を通じてユーザーからご提供いただく情報は以下のとおりです。
+                                        <strong>Personal Data</strong><br>
+                                        While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
                                         <ul>
-                                            <li>氏名、生年月日、性別、職業等に関する情報</li>
-                                            <li>メールアドレス、電話番号、住所等連絡先に関する情報</li>
-                                            <li>クレジットカード情報、銀行口座情報、電子マネー情報等決済手段に関する情報</li>
-                                            <li>ユーザーの肖像を含む静止画または動画の情報</li>
-                                            <li>その他当方が定める入力フォームにユーザーが入力する情報</li>
+                                            <li>Email address</li>
+                                            <li>First name and last name</li>
+                                            <li>Phone number</li>
+                                            <li>Cookies and Usage Data</li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <strong>ユーザーが本サービスの利用において、他のサービスと連携を許可することにより、当該他のサービスからご提供いただく情報</strong><br>
-                                        ユーザーが、本サービスを利用するにあたり、ソーシャルネットワーキングサービス等の他のサービスとの連携を許可した場合には、その許可の際にご同意いただいた内容に基づき、以下の情報を当該外部サービスから収集します。
-                                        <ul>
-                                            <li>当該外部サービスでユーザーが利用するID</li>
-                                            <li>その他当該外部サービスのプライバシー設定によりユーザーが連携先に開示を認めた情報</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <strong>ユーザーが本サービスを利用するにあたって、当方が収集する情報</strong><br>
-                                        当方は、本サービスへのアクセス状況やそのご利用方法に関する情報を収集することがあります。これには以下の情報が含まれます。
-                                        <ul>
-                                            <li>リファラ</li>
-                                            <li>IPアドレス</li>
-                                            <li>サーバーアクセスログに関する情報</li>
-                                            <li>Cookie、ADID、IDFAその他の識別子</li>
-                                        </ul>
+                                        <strong>Usage Data</strong><br>
+                                        We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data"). This may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, unique device identifiers and other diagnostic data.
                                     </li>
                                 </ol>
 
-                                <h2>第2条（利用目的）</h2>
-                                <p>本サービスのサービス提供にかかわる利用者情報の具体的な利用目的は以下のとおりです。</p>
-                                <ol>
-                                    <li>本サービスに関する登録の受付、本人確認、ユーザー認証、ユーザー設定の記録、利用料金の決済計算等本サービスの提供、維持、保護及び改善のため</li>
-                                    <li>ユーザーのトラフィック測定及び行動測定のため</li>
-                                    <li>広告の配信、表示及び効果測定のため</li>
-                                    <li>本サービスに関するご案内、お問い合わせ等への対応のため</li>
-                                    <li>本サービスに関する当方の規約、ポリシー等（以下「規約等」といいます。）に違反する行為に対する対応のため</li>
-                                    <li>本サービスに関する規約等の変更などを通知するため</li>
-                                </ol>
+                                <h2>2. Use of Data</h2>
+                                <p>Burger Tap uses the collected data for various purposes:</p>
+                                <ul>
+                                    <li>To provide and maintain the Service</li>
+                                    <li>To notify you about changes to our Service</li>
+                                    <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
+                                    <li>To provide customer care and support</li>
+                                    <li>To provide analysis or valuable information so that we can improve the Service</li>
+                                    <li>To monitor the usage of the Service</li>
+                                    <li>To detect, prevent and address technical issues</li>
+                                </ul>
 
-                                <h2>第3条（第三者提供）</h2>
-                                <p>当方は、利用者情報のうち、個人情報については、あらかじめユーザーの同意を得ないで、第三者（日本国外にある者を含みます。）に提供しません。但し、次に掲げる必要があり第三者に提供する場合はこの限りではありません。</p>
-                                <ol>
-                                    <li>当方が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合</li>
-                                    <li>合併その他の事由による事業の承継に伴って個人情報が提供される場合</li>
-                                    <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、ユーザーの同意を得ることによって当該事務の遂行に支障を及ぼすおそれがある場合</li>
-                                    <li>その他、個人情報保護法その他の法令で認められる場合</li>
-                                </ol>
+                                <h2>3. Disclosure of Data</h2>
+                                <p>Burger Tap may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+                                <ul>
+                                    <li>To comply with a legal obligation</li>
+                                    <li>To protect and defend the rights or property of Burger Tap</li>
+                                    <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
+                                    <li>To protect the personal safety of users of the Service or the public</li>
+                                    <li>To protect against legal liability</li>
+                                </ul>
 
-                                <h2>第4条（お問い合わせ窓口）</h2>
-                                <p>ご意見、ご質問、苦情のお申出その他利用者情報の取扱いに関するお問い合わせは、下記の窓口までお願いいたします。</p>
+                                <h2>4. Security of Data</h2>
+                                <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+
+                                <h2>5. Contact Us</h2>
+                                <p>If you have any questions about this Privacy Policy, please contact us:</p>
                                 <p class="bg-gray-100 p-4 rounded-md">
-                                    住所：〒000-0000 東京都〇〇区〇〇 1-2-3<br>
-                                    SmartApp運営事務局<br>
-                                    担当部署：個人情報保護管理担当<br>
-                                    E-mail：support@example.com
+                                    Burger Tap Support Team<br>
+                                    123 Burger Lane, Food City, FC 90210<br>
+                                    Email: support@burgertap.example.com
                                 </p>
 
-                                <h2>第5条（プライバシーポリシーの変更手続）</h2>
-                                <p>当方は、必要に応じて、本ポリシーを変更します。但し、法令上ユーザーの同意が必要となるような本ポリシーの変更を行う場合、変更後の本ポリシーは、当方所定の方法で変更に同意したユーザーに対してのみ適用されるものとします。なお、当方は、本ポリシーを変更する場合には、変更後の本ポリシーの施行時期及び内容を当方のウェブサイト上での表示その他の適切な方法により周知し、またはユーザーに通知します。</p>
-
                                 <p class="text-right mt-8 text-sm text-gray-500">
-                                    2025年12月14日 制定
+                                    Last Updated: December 14, 2025
                                 </p>
                             </div>
                         </div>
@@ -290,72 +276,35 @@
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div class="px-6 py-8 sm:p-10">
-                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">利用規約</h1>
+                            <h1 class="text-3xl font-bold text-gray-900 border-b pb-4 mb-6">Terms of Service</h1>
                             <div class="legal-text text-gray-600">
-                                <p>この利用規約（以下「本規約」といいます。）は、SmartApp運営事務局（以下「当方」といいます。）がこのウェブサイト上で提供するサービス（以下「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下「ユーザー」といいます。）には、本規約に従って、本サービスをご利用いただきます。</p>
+                                <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Burger Tap mobile application (the "Service") operated by Burger Tap ("us", "we", or "our").</p>
 
-                                <h2>第1条（適用）</h2>
-                                <ol>
-                                    <li>本規約は、ユーザーと当方との間の本サービスの利用に関わる一切の関係に適用されるものとします。</li>
-                                    <li>当方は本サービスに関し、本規約のほか、ご利用にあたってのルール等、各種の定め（以下「個別規定」といいます。）をすることがあります。これら個別規定はその名称のいかんに関わらず、本規約の一部を構成するものとします。</li>
-                                    <li>本規約の規定が前項の個別規定の規定と矛盾する場合には、個別規定において特段の定めなき限り、個別規定の規定が優先されるものとします。</li>
-                                </ol>
+                                <h2>1. Agreement to Terms</h2>
+                                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
 
-                                <h2>第2条（利用登録）</h2>
-                                <ol>
-                                    <li>本サービスにおいては、登録希望者が本規約に同意の上、当方の定める方法によって利用登録を申請し、当方がこれを承認することによって、利用登録が完了するものとします。</li>
-                                    <li>当方は、利用登録の申請者に以下の事由があると判断した場合、利用登録の申請を承認しないことがあり、その理由については一切の開示義務を負わないものとします。
-                                        <ul>
-                                            <li>利用登録の申請に際して虚偽の事項を届け出た場合</li>
-                                            <li>本規約に違反したことがある者からの申請である場合</li>
-                                            <li>その他、当方が利用登録を相当でないと判断した場合</li>
-                                        </ul>
-                                    </li>
-                                </ol>
+                                <h2>2. Accounts</h2>
+                                <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+                                <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.</p>
 
-                                <h2>第3条（禁止事項）</h2>
-                                <p>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
-                                <ol>
-                                    <li>法令または公序良俗に違反する行為</li>
-                                    <li>犯罪行為に関連する行為</li>
-                                    <li>本サービスの内容等、本サービスに含まれる著作権、商標権ほか知的財産権を侵害する行為</li>
-                                    <li>当方、ほかのユーザー、またはその他第三者のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
-                                    <li>本サービスによって得られた情報を商業的に利用する行為</li>
-                                    <li>当方のサービスの運営を妨害するおそれのある行為</li>
-                                    <li>不正アクセスをし、またはこれを試みる行為</li>
-                                    <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
-                                    <li>不正な目的を持って本サービスを利用する行為</li>
-                                    <li>本サービスの他のユーザーまたはその他の第三者に不利益、損害、不快感を与える行為</li>
-                                    <li>他のユーザーに成りすます行為</li>
-                                    <li>当方が許諾しない本サービス上での宣伝、広告、勧誘、または営業行為</li>
-                                    <li>当方のサービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為</li>
-                                    <li>その他、当方が不適切と判断する行為</li>
-                                </ol>
+                                <h2>3. Intellectual Property</h2>
+                                <p>The Service and its original content, features, and functionality are and will remain the exclusive property of Burger Tap and its licensors. The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Burger Tap.</p>
 
-                                <h2>第4条（本サービスの提供の停止等）</h2>
-                                <p>当方は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
-                                <ol>
-                                    <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
-                                    <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
-                                    <li>コンピュータまたは通信回線等が事故により停止した場合</li>
-                                    <li>その他、当方が本サービスの提供が困難と判断した場合</li>
-                                </ol>
-                                <p>当方は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</p>
+                                <h2>4. Links To Other Web Sites</h2>
+                                <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by Burger Tap.</p>
+                                <p>Burger Tap has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services. You further acknowledge and agree that Burger Tap shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
 
-                                <h2>第5条（免責事項）</h2>
-                                <ol>
-                                    <li>当方の債務不履行責任は、当方の故意または重過失によらない場合には免責されるものとします。</li>
-                                    <li>当方は、本サービスに関して、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等について一切責任を負いません。</li>
-                                </ol>
+                                <h2>5. Termination</h2>
+                                <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.</p>
 
-                                <h2>第6条（準拠法・裁判管轄）</h2>
-                                <ol>
-                                    <li>本規約の解釈にあたっては、日本法を準拠法とします。</li>
-                                    <li>本サービスに関して紛争が生じた場合には、当方の本店所在地を管轄する裁判所を専属的合意管轄裁判所とします。</li>
-                                </ol>
+                                <h2>6. Limitation of Liability</h2>
+                                <p>In no event shall Burger Tap, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage.</p>
+
+                                <h2>7. Changes</h2>
+                                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
 
                                 <p class="text-right mt-8 text-sm text-gray-500">
-                                    2025年12月14日 制定
+                                    Last Updated: December 14, 2025
                                 </p>
                             </div>
                         </div>
@@ -367,36 +316,36 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
+    <footer class="bg-gray-900 text-gray-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center text-white mb-4">
-                        <i class="fa-solid fa-layer-group text-2xl mr-2"></i>
-                        <span class="font-bold text-xl tracking-tight">SmartApp</span>
+                        <i class="fa-solid fa-burger text-2xl mr-2 text-orange-500"></i>
+                        <span class="font-bold text-xl tracking-tight">Burger Tap</span>
                     </div>
                     <p class="text-sm text-gray-400">
-                        あなたの生活をより豊かにするパートナー。
+                        Making your daily life tastier, one tap at a time.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">リンク</h4>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" onclick="navigateTo('home')" class="hover:text-white transition">ホーム</a></li>
-                        <li><a href="#" onclick="navigateTo('features')" class="hover:text-white transition">機能紹介</a></li>
-                        <li><a href="#" class="hover:text-white transition">よくある質問</a></li>
+                        <li><a href="#" onclick="navigateTo('home')" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" onclick="navigateTo('features')" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">法的情報</h4>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Legal</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" onclick="navigateTo('terms')" class="hover:text-white transition">利用規約</a></li>
-                        <li><a href="#" onclick="navigateTo('privacy')" class="hover:text-white transition">プライバシーポリシー</a></li>
-                        <li><a href="#" class="hover:text-white transition">特定商取引法に基づく表記</a></li>
+                        <li><a href="#" onclick="navigateTo('terms')" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" onclick="navigateTo('privacy')" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">ダウンロード</h4>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Download</h4>
                     <div class="flex space-x-2">
                         <a href="#" class="text-gray-400 hover:text-white transition text-2xl"><i class="fa-brands fa-apple"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white transition text-2xl"><i class="fa-brands fa-google-play"></i></a>
@@ -404,30 +353,30 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center text-gray-500">
-                &copy; 2025 SmartApp Inc. All rights reserved.
+                &copy; 2025 Burger Tap Inc. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script>
         function navigateTo(pageId) {
-            // モバイルメニューを閉じる
+            // Close mobile menu
             document.getElementById('mobile-menu').classList.add('hidden');
             
-            // スクロールをトップへ
+            // Scroll to top
             window.scrollTo(0, 0);
 
-            // 全セクションを非表示
+            // Hide all sections
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(section => {
                 section.classList.remove('active');
             });
 
-            // 指定されたページを表示
+            // Show target section
             if (pageId === 'home' || pageId === 'features') {
                 document.getElementById('home').classList.add('active');
                 if(pageId === 'features') {
-                    // 機能セクションへスクロール
+                    // Smooth scroll to features
                     setTimeout(() => {
                         const el = document.getElementById('features');
                         if(el) el.scrollIntoView({ behavior: 'smooth' });
